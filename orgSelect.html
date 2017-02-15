@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>coremail</title>
+    <link href="./css/common.css" rel="stylesheet"/>
+</head>
+<body>
+<div id="orgSelect">
+
+</div>
+<script id="tableTpl" type="text/x-handlebars-template">
+    <div class="header">
+        <div class="logo">
+            <div class="iconbg migration"></div>
+            <span class="logoText">{{i18n "openMoved"}}</span>
+        </div>
+    </div>
+    <div class="banner">
+        <div class="m-bg">
+            <div class="content">
+                <span class="icon"></span>
+                {{#unless migrationAgain}}
+                <span class="text">{{i18n "orgSelect"}}</span>
+                {{else}}
+                <span class="text">{{i18n "m_parameter"}}</span>
+                {{/unless}}
+            </div>
+        </div>
+    </div>
+    <div class="m-table">
+        {{#unless migrationAgain}}
+        <div class="title">{{i18n "selectOrg"}}</div>
+        {{else}}
+        <div class="title">{{i18n "m_c_parameter"}}</div>
+        <p class="m_a_tip">{{i18n "m_c_tip"}}</p>
+        {{/unless}}
+        <div id="table">
+            <table class="table">
+                <tr>
+                    {{#unless migrationAgain}}
+                    <th  class="t-selectOrg">{{i18n "orgSelect"}}</th>
+                    <th  class="t-orgID">{{i18n "orgId"}}</th>
+                    <th  class="t-status">{{i18n "o-openMigrationStatus"}}</th>
+                    <th  class="t-handle">{{i18n "o-handle"}}</th>
+                    {{else}}
+                    <th class="t-domainName">{{i18n "domainName"}}</th>
+                    <th  class="t-status">{{i18n "o-openMigrationStatus"}}</th>
+                    {{/unless}}
+                </tr>
+                {{#each list}}
+                <tr class="t-hover">
+                    {{#unless domainName}}
+                    <td>{{orgName}}</td>
+                    <td>{{orgId}}</td>
+                    <td>{{orgStatus openMigration}}</td>
+                    <td class="t-operate" data-open="{{openMigration}}" data-orgid="{{orgId}}">{{orgHandle openMigration}}</td>
+                    {{else}}
+                    <td data-open="{{openedMigration}}" data-domain="{{domainName}}">{{domainName}}</td>
+                    <td data-open="{{openedMigration}}" data-domain="{{domainName}}">{{orgStatus openedMigration}}</td>
+                    {{/unless}}
+                </tr>
+                {{/each}}
+            </table>
+        </div>
+    </div>
+
+</script>
+<script src="./js/components/requirejs/require.js" id="templateType" data-page="orgSelect" data-main="./js/main"></script>
+</body>
+</html>

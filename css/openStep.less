@@ -1,0 +1,359 @@
+#openStep{
+  .e-step-bg {
+    width: 661px;
+    height: 60px;
+    margin: 0 auto;
+    position: relative;
+    top: 30%;
+    .step-bg {
+      width: 100%;
+      height: 42px;
+      &.step1 {
+        background: url("../img/1.png") no-repeat center;
+      }
+      &.step2 {
+        background: url("../img/2.png") no-repeat center;
+      }
+      &.step3 {
+        background: url("../img/3.png") no-repeat center;
+      }
+      &.step4 {
+        background: url("../img/4.png") no-repeat center;
+      }
+    }
+    ul{
+      margin-top: 10px;
+      width: 100%;
+      text-align: center;
+      font-size: 14px;
+      font-weight: bold;
+      li{
+        list-style: none;
+        color: #ffffff;
+        float: left;
+        width: 25%;
+      }
+    }
+    .e-step {
+      position: absolute;
+      width: 70px;
+      height: 70px;
+      background: transparent;
+      cursor: pointer;
+      &.e-step1{
+        left: 0;
+        top: -4px;
+      }
+      &.e-step2{
+        left: 169px;
+        top: -4px;
+      }
+      &.e-step3{
+        left: 337px;
+        top: -4px;
+      }
+      &.e-step4{
+        right: 0;
+        top: -4px;
+      }
+    }
+  }
+  .s-contentBox{
+
+    .s-footer{
+      margin-top: 50px;
+      position: relative;
+      height: 30px;
+      .f-box{
+        position: absolute;
+        right: 0;
+        .goStepOne,.goStepThree,.goStepFour,.goStepTwo,.openMigrationBtn{
+          display: inline-block;
+        }
+      }
+    }
+    .s-one-box{
+      position: relative;
+      font-size: 16px;
+      .importUser{
+        cursor: pointer;
+        color: @blueColor;
+      }
+      .goStepTwo{
+        margin-top: 50px;
+        float: right;
+      }
+      &:after{
+        content: "";
+        display: block;
+        clear: both;
+      }
+      .title{
+        font-weight: bold;
+      }
+      p{
+        margin-top: 30px;
+      }
+    }
+    .s-two-box{
+      font-size: 16px;
+      .s-domain{
+        .d-title ,.d-detail{
+          display: inline-block;
+        }
+        .d-detail{
+         font-size: 12px;
+          color: rgba(0,0,0,0.55);
+        }
+        .d-domain{
+          font-size: 14px;
+          padding: 10px 0 30px 0;
+          border-bottom: 1px solid @borderColor;
+          color: #222222;
+          &:after{
+            content: "";
+            display: block;
+            clear: both;
+          }
+          &>div{
+            float: left;
+            width: 50%;
+            padding-top: 10px ;
+            &>label{
+              display: inline-block;
+            }
+          }
+        }
+      }
+      .s-operator{
+        border-bottom: 1px solid @borderColor;
+        padding: 30px 0 30px 0;
+        .o-Item{
+          padding-top: 10px;
+          font-size: 14px;
+          color: #222222;
+          &:after{
+            content: "";
+            display: block;
+            clear: both;
+          }
+          &>div{
+            float: left;
+            width: 25%;
+            padding-top: 10px ;
+            &>label{
+              display: inline-block;
+            }
+          }
+        }
+        .b-other-server{
+          display: none;
+         input{
+           width: 100%;
+           height: 28px;
+           vertical-align: bottom;
+         }
+        }
+      }
+      .s-server{
+       padding: 30px 0 0 0;
+        input{
+          width: 100%;
+          height: 28px;
+          vertical-align: bottom;
+        }
+        .s-txt{
+          font-size: 12px;
+          color: rgba(0,0,0,0.75);
+        }
+        .s-type{
+          padding-top: 20px;
+          >div{
+            display: inline-block;
+            position: relative;
+            vertical-align: bottom;
+          }
+          .s-protocolType {
+            .protocolType {
+              padding-left: 10px;
+              outline: none;
+              cursor: pointer;
+              position: relative;
+              width: 130px;
+              height: 30px;
+              margin-top: 6px;
+              .txt {
+                display: inline-block;
+                width: 80%;
+              }
+              .icon {
+                background: url("../img/select.png");
+                width: 9px;
+                height: 12px;
+                display: inline-block;
+              }
+
+            }
+            .ul-box{
+              position: absolute;
+              width: 100%;
+                 &.ul-hidden{
+                   display: none;
+                 }
+                  li{
+                    background-color: @whiteColor;
+                    cursor: pointer;
+                    padding-left: 10px;
+                    height: 30px;
+                    line-height: 30px;
+                    list-style: none;
+                    border-bottom: 1px solid @input-border-color;
+                    border-left: 1px solid @input-border-color;
+                    border-right: 1px solid @input-border-color;
+                    width: 100%;
+                    &:hover{
+                      background: #eaf6ff;
+                    }
+                  }
+                }
+          }
+          .s-sport{
+            .s-port-box {
+              width: 102px;
+            }
+          }
+          .ssl-box{
+            vertical-align: super;
+            margin-left: 10px;
+          }
+        }
+        .s-test{
+          margin-top: 20px;
+         .t-account,.t-pass{
+           display: inline-block;
+         }
+          .a-test,.p-test{
+            width: 220px;
+          }
+          .t-btnBox{
+            display: inline-block;
+            .testBtn{
+              color: @whiteColor;
+              display: inline-block;
+              vertical-align: middle;
+              position: relative;
+              bottom: 3px;
+            }
+            .btn-txt{
+              vertical-align: super;
+              margin-left: 5px;
+            }
+          }
+        }
+      }
+    }
+    .s-three-box{
+      position: relative;
+      .t-migrationType{
+        font-size: 16px;
+        padding-bottom: 30px;
+        border-bottom: 1px solid @borderColor;
+       .m-title{
+       }
+        .m-independently{
+          margin-top: 20px;
+        }
+        .m-batch{
+          margin-top: 10px;
+        }
+        .independent-txt{
+          display: none;
+          margin-top: 6px;
+          padding-left: 20px;
+          font-size: 14px;
+          line-height: 25px;
+          color: @tipFont;
+          .independent-bg{
+            background: url("../img/ban.png");
+            width: 710px;
+            height: 273px;
+          }
+        }
+        .m-batchType{
+          display: none;
+          padding:20px;
+          margin-top: 6px;
+          border: 1px solid @borderColor;
+          background: #f5faff;
+          width: 100%;
+          .batchType-one{
+            .d-txt{
+              cursor: pointer;
+              color: @fontlightColor;
+            }
+            .d-choose{
+              font-size: 14px;
+              cursor: pointer;
+            }
+            .n-txt{
+              font-size: 12px;
+              color: @tipFont;
+            }
+            .p-txt{
+              margin-top: 6px;
+              padding-left: 20px;
+            }
+          }
+          .batchType-Two{
+            margin-top: 20px;
+            .d-txt{
+              font-size: 12px;
+              color: @tipFont;
+            }
+            .unifiedPwdBox{
+              display: none;
+              padding-left: 20px;
+            }
+          }
+        }
+      }
+      .t-chooseFile{
+        padding-top:30px;
+        .f-type{
+          margin-top: 20px;
+          .diy-file{
+            margin-top: 10px;
+          }
+        }
+      }
+    }
+    .s-four-box{
+      .f-t-text{
+        font-size: 14px;
+        .title{
+          font-size: 16px;
+        }
+        .tipOne,.tipTwo{
+          margin-top: 20px;
+        }
+        .f-t-bg{
+          margin-top: 10px;
+          background: url("../img/pic2.png");
+          width: 740px;
+          height: 351px;
+        }
+      }
+    }
+  }
+  .uploadErrortxt{
+    display: none;
+    margin-left: 20px;
+    .error-txt{
+      color: red;
+    }
+  }
+  .u-otherError{
+    color: red;
+  }
+
+}

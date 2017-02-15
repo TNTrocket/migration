@@ -1,0 +1,237 @@
+<div class="header">
+    <div class="logo">
+        <!--<div class="iconbg coremail"></div>-->
+        <div class="iconbg migration"></div>
+        <span class="logoText">{{i18n "openMoved"}}</span>
+        <div class="m_modification">{{i18n "m_modification"}}</div>
+    </div>
+</div>
+<div class="m_modification_box">
+    <div class="maskBg m_modifyBg">
+    </div>
+    <div class="mask-content m_modifycontent">
+        <div class="title">{{i18n "tips"}}
+            <img src="./img/close.png" class=" m_c_modifyContent" data-modify="cancel"/>
+        </div>
+        <div class="content">
+          {{i18n "m_migration_war"}}
+        </div>
+         <div class="f-btnBOX">
+             <div class="btn m_cancel" data-modify="cancel">
+                 {{i18n "t-cancel"}}
+             </div>
+             <span class="m_know" data-modify="modify">
+                {{i18n "m_migration_com"}}
+             </span>
+
+         </div>
+    </div>
+</div>
+<div class="banner"></div>
+<div class="o-content">
+    <div class="o-inquire">
+        <p>{{i18n "userQuery"}}</p>
+        <div>
+            <p class="o-account">{{i18n "emailAccount"}}</p>
+            <div>
+                <div class="input-box">
+                    <input type="text" name="domainName" autocomplete="off"/>
+                </div>
+                <div class="btn openMoveBtn" data-action="queryDomain">
+                 {{i18n "query"}}
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="m-status">
+      <div>
+       {{i18n "m_progress"}}
+      </div>
+        <div class="m-s-table">
+            <div class="table m-Progress">
+
+            </div>
+            <div class="tips migrationAgain">
+                <span>{{i18n "migrationAgainTip"}}</span>
+                <span class="againMove" data-action="againMigration">{{i18n "againMigration"}}</span>
+                <span class="a-m-close" data-action="closeAgain">{{i18n "closeAgain"}}</span>
+                <div class="moreAgain">
+                    <div class="m-a-independently">
+                        <label data-action="independent">
+                            <input type="radio" name="migrationType" class="input-hidden" value="0" data-checked="true" checked/>
+                            <span class="radio-box  checked"></span>
+                            <span>{{i18n "m-independently"}}</span>
+                        </label>
+                    </div>
+                    <div class="a-independent-txt">
+                        <p>
+                            {{i18n "independentTxt"}}
+                        </p>
+                        <img class="a-independent-bg" src="./img/ban.png"/>
+                    </div>
+                    <div class="m-a-batch">
+                        <label data-action="batchMigration">
+                            <input type="radio" name="batchType" class="input-hidden" value="more"/>
+                            <span class="radio-box"></span>
+                            <span>{{i18n "batchMigration"}}</span>
+                        </label>
+                    </div>
+                    <div class="m-a-batchType">
+                        <div class="a-batchType-one">
+                            <label data-action="importUser">
+                                <input type="radio" class="input-hidden" name="migrationType" value="1"/>
+                                <span class="radio-box"></span>
+                                <span class="b-txt">{{i18n "i_u_migration"}}</span>
+                            </label>
+
+                            <div class="a-one-txt">
+                                <p class="a-o-txt p-txt">{{i18n "csvTip"}}
+                                    <span class="d-a-txt viewExplain" data-againMigration="viewExplain">{{i18n "viewExplain"}}</span>
+                                </p>
+                                <div class="webuploaderBox">
+                                <div class="webuploader-container" id="uploader">
+                                    <div class="d-txt l_btn" id="f-picker">{{i18n "selectFile"}}</div>
+                                </div>
+                                <span class="a-o-txt" id="fileName">{{i18n "no_s_file"}}</span>
+                                <span class="upload-a-Error a-o-txt">
+                                  <span class="error-txt"><span class="errorNumber"></span>{{i18n "numberError"}}</span>
+                                  <span class="viewUploadError d-a-txt" data-againMigration="viewErrorReason">{{i18n "viewErrorReason"}}</span>
+                                </span>
+                                <span class="u-otherError"></span>
+                               </div>
+                            </div>
+                        </div>
+                        <div class="a-batchType-Two">
+                            <label data-action="batchTypePwd">
+                                <input type="radio" class="input-hidden" name="migrationType" value="2"/>
+                                <span class="radio-box"></span>
+                                <span class="b-txt">{{i18n "batchTypePwd"}}</span>
+                            </label>
+                            <div class="a-two-input">
+                                <p class="a-o-txt">{{i18n "b_T_Pwd"}}</p>
+                                <div class="a-unifiedPwdBox">
+                                    <div class="input-box">
+                                        <input type="password" name="unifiedPwd" placeholder="{{i18n  'password'}}" value="" autocomplete="off"/>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="s_migration">
+                        <div class="s_migration_error"></div>
+                        <div class="btn s_migrationBtn" data-againMigration="s_migration">
+                            {{i18n "s_migration"}}
+                        </div>
+                    </div>
+                    <div class="maskBg error-maskBg">
+                    </div>
+                    <div class="mask-content error-mask">
+                        <div class="title">{{i18n "errorReason"}}
+                            <img src="./img/close.png" class=" closeError-mask"/>
+                        </div>
+                        <div class="errorTable">
+
+                        </div>
+                    </div>
+                    <div class="csvExplain">
+                        <div class="header">
+                            <span>{{i18n "import_csv"}}</span>
+                            <img src="./img/close.png" class="icon closeExplain" data-action="closeExplain"/>
+                            <!--<span class="icon"></span>-->
+                        </div>
+                        <div class="c-d-content">
+                            <div class="txt">
+                                <span class="icon"></span>
+                                <a href="./csvTemplate/userImportTemplate.csv"><span class="title">{{i18n "i_csv_download"}}</span></a>
+                                <p class="d-txt">{{i18n "demoList"}}</p>
+                            </div>
+                        </div>
+                        <div class="c-d-table">
+                            <table>
+                                <tr>
+                                    <th>
+                                        {{i18n "demo_csv_email"}}
+                                    </th>
+                                    <th>
+                                        {{i18n "demo_csv_pass"}}
+                                    </th>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        xxx@xx.com
+                                    </td>
+                                    <td>
+                                        xxxxxxxxxxx
+                                    </td>
+                                </tr>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="m-a-tips"></div>
+        </div>
+    </div>
+
+    <div class="o-i-tableBox">
+        <div>
+            <div class="btn openMoveBtn  refreshBtn" data-action="refreshTable">
+                {{i18n "refresh"}}
+            </div>
+            <button class="btn openMoveBtn closeMigration" data-action="closeMigration" type="button" disabled="disabled">
+                {{i18n "closeMigration"}}
+            </button>
+            <span>
+                {{i18n "closeMigrationTip"}}
+            </span>
+        </div>
+            <div class="tableTool">
+                <select class="migration-progress" data-select="status" name="migrationProgress">
+                    <option value="">{{i18n "m_progress_all"}}</option>
+                    <option value="1">{{i18n "m_progress_ing"}}</option>
+                    <option value="2">{{i18n "m_progress_over"}}</option>
+                    <option value="400">{{i18n "m_progress_fail"}}</option>
+                    <option value="0">{{i18n "m_progress_tomove"}}</option>
+                    <option value="3">{{i18n "m_progress_close"}}</option>
+                </select>
+
+                <span>
+                    {{i18n "a_txt"}}<span class="pageText">5</span>{{i18n "page"}}
+                </span>
+
+                <select class="migration-pageSize" data-select="pageSize" name="pageSize">
+                    <option value="10">{{i18n "p_size_10"}}</option>
+                    <option value="20" selected>{{i18n "p_size_20"}}</option>
+                    <option value="50">{{i18n "p_size_50"}}</option>
+                    <option value="100">{{i18n "p_size_100"}}</option>
+                </select>
+                <div class="tablePageNav">
+
+                </div>
+                <div class="b-icon">
+                    <span class="lastPage"></span>
+                    <span class="nextPage"></span>
+                </div>
+            </div>
+            <div class="o-i-table">
+
+            </div>
+        <div class="tableFooterTool">
+            <select class="migration-pageSize" name="pageSizeTwo" data-select="pageSizeTwo">
+                <option value="10">{{i18n "p_size_10"}}</option>
+                <option value="20" selected>{{i18n "p_size_20"}}</option>
+                <option value="50">{{i18n "p_size_50"}}</option>
+                <option value="100">{{i18n "p_size_100"}}</option>
+            </select>
+            <span>{{i18n "a_txt"}}<span class="pageText">5</span>{{i18n "page"}}</span>
+            <div class="tablePageNavTwo">
+
+            </div>
+            <div class="b-icon">
+                <span class="lastPage"></span>
+                <span class="nextPage"></span>
+            </div>
+        </div>
+    </div>
+
+</div>

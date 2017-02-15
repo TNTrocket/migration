@@ -1,0 +1,12 @@
+<table class="table">
+    <tr>
+        <th  class="t-selectOrg">{{i18n "migrationAccount"}}</th>
+        <th  class="t-orgID">{{i18n "errorReason"}}</th>
+    </tr>
+    {{#each this}}
+    <tr class="t-hover">
+        <td>{{email}}</td>
+        <td>{{i18n failMsg}}</td>
+    </tr>
+    {{/each}}
+</table>

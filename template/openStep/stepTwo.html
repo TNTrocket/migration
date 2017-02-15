@@ -1,0 +1,103 @@
+<div class="s-two-box">
+    <div class="s-domain">
+        <div class="d-title">{{i18n "migrationDomain"}}</div>
+        <div class="d-detail">
+           {{i18n "d-detail"}}
+        </div>
+        <div class="d-domain">
+            {{#each domainNames}}
+            <div>
+             <label>
+                <input type="checkbox" name="domain_{{@index}}" class="input-hidden" value="{{this}}"/>
+                <span class="check-box"></span>
+                 <span>{{this}}</span>
+             </label>
+            </div>
+            {{/each}}
+        </div>
+    </div>
+    <div class="s-operator">
+        <div class="o-title">
+        {{i18n "s-operator"}}
+        </div>
+        <div class="o-Item">
+            {{#each operatorList}}
+            <div>
+            <label data-action="n-operatorList">
+                <input type="radio" name="operator" class="input-hidden"
+                 value="{{displayName}}"  data-operator="{{displayName}}"     data-pop="{{pop}}" data-imap="{{imap}}"/>
+                <span class="radio-box"></span>
+                <span>{{displayName}}</span>
+            </label>
+            </div>
+            {{/each}}
+            <div>
+                <label data-action="otherOperator">
+                    <input type="radio" name="operator" class="input-hidden" value="otherOperator" data-operator="otherOperator"/>
+                    <span class="radio-box "></span>
+                    <span>{{i18n  "otherOperator"}}</span>
+                </label>
+            </div>
+        </div>
+        <div class="b-other-server">
+            <span>{{i18n "serverAddr"}}</span>
+            <div class="input-box">
+                <input type="text" name="serverAddr"/>
+            </div>
+        </div>
+    </div>
+    <div class="s-server">
+        <div class="s-title">
+           {{i18n "s-service"}}
+        </div>
+        <div class="s-type">
+            <div class="s-protocolType">
+               <div class="s-txt">{{i18n "protocolType"}}</div>
+                <select class="protocolType" name="protocol">
+                    <option value="IMAP">{{i18n "IMAP"}}</option>
+                    <option value="POP">{{i18n "pop"}}</option>
+                </select>
+            </div>
+            <div class="s-sport">
+                <div class="s-txt">{{i18n "port"}}</div>
+                <div class="input-box s-port-box">
+                  <input type="text" name="serverPort"/>
+                </div>
+            </div>
+            <div class="ssl-box">
+                <label data-action="SSL">
+                    <input type="checkbox" name="supportSSL" class="input-hidden" value="true"/>
+                    <span class="check-box "></span>
+                    <span>SSL</span>
+                </label>
+            </div>
+            <input type="hidden" name="acceptAllCerts"  value=""/>
+        </div>
+        <div class="s-test">
+         <div class="t-account">
+             <div class="s-txt">{{i18n "t-account"}}</div>
+             <div class="input-box a-test">
+                 <input type="text" name="email" autocomplete="off">
+             </div>
+         </div>
+            <input type="password"  autocomplete="off" style="display: none">
+            <div class="t-pass">
+                <div class="s-txt">{{i18n "t-pass"}}</div>
+                <div class="input-box p-test">
+                    <input type="password" name="password" autocomplete="off">
+                </div>
+            </div>
+            <div class="t-btnBox">
+                <button class="btn testBtn" disabled="disabled" type="button">{{i18n "test"}}</button>
+                <span class="s-txt btn-txt">{{i18n  "t-testServer"}}</span>
+            </div>
+        </div>
+        <div class="s-footer">
+            <div class="errorTip"></div>
+          <div class="f-box">
+              <div class="btn goStepOne lastStep">{{i18n "lastStep"}}</div>
+              <div class="btn goStepThree">{{i18n "nextStep"}}</div>
+          </div>
+        </div>
+    </div>
+</div>

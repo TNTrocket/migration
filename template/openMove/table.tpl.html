@@ -1,0 +1,25 @@
+<table class="searchTable">
+    <tr>
+        <th class="input allClick" data-table="all">{{i18n "t-AllChoose"}}</th>
+        <th class="account">{{i18n "email"}}</th>
+        <th class="status">{{i18n "m-status"}}</th>
+    </tr>
+    {{#each this}}
+    <tr>
+        <td class="t-checkbox">
+            <label>
+                <input type="checkbox" class="input-hidden" data-domain="{{email}}" data-progress="{{migrationProgress}}"/>
+                <span class="check-box "></span>
+            </label>
+        </td>
+        <td>{{email}}</td>
+        <td>{{migrationStatus  migrationProgress}}</td>
+    </tr>
+    {{/each}}
+    <tr class="no-data">
+        <td colspan="3">
+            {{i18n "no_data"}}
+        </td>
+    </tr>
+
+</table>

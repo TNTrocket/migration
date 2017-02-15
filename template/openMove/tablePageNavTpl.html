@@ -1,0 +1,5 @@
+<select name="{{n}}page_{{type}}">
+    {{#each nav}}
+    <option value="{{this}}">{{this}}/{{#with  ../this}}{{pageTotal}}{{/with}}</option>
+    {{/each}}
+</select>

@@ -1,0 +1,136 @@
+<div class="s-three-box">
+  <div class="t-migrationType">
+      <div class="m-title">
+          {{i18n "m-way"}}
+      </div>
+      <div class="m-independently">
+          <label data-action="independent">
+              <input type="radio" name="migrationType" class="input-hidden" value="0" data-checked="true"/>
+              <span class="radio-box "></span>
+              <span>{{i18n "m-independently"}}</span>
+          </label>
+      </div>
+      <div class="independent-txt">
+         <p>
+          {{i18n "independentTxt"}}
+         </p>
+          <div class="independent-bg"></div>
+      </div>
+      <div class="m-batch">
+          <label data-action="batchMigration">
+              <input type="radio" name="batchType" class="input-hidden" value="more"/>
+              <span class="radio-box"></span>
+              <span>{{i18n "batchMigration"}}</span>
+          </label>
+      </div>
+      <div class="maskBg">
+      </div>
+      <div class="mask-content error-mask">
+         <div class="title">{{i18n "errorReason"}}
+             <img src="./img/close.png" class=" closeError-mask"/>
+         </div>
+          <div class="errorTable">
+
+          </div>
+      </div>
+      <div class="m-batchType">
+         <div class="batchType-one">
+             <label data-action="importUser">
+                 <input type="radio" class="input-hidden" name="migrationType" value="1"/>
+                 <span class="radio-box"></span>
+                 <span class="b-txt">{{i18n "i_u_migration"}}</span>
+             </label>
+             <div class="webuploader-container" id="uploader">
+                 <div class="d-txt d-choose" id="f-picker" >{{i18n "selectFile"}}</div>
+             </div>
+             <span class="n-txt" id="fileName">{{i18n "no_s_file"}}</span>
+                <span class="uploadErrortxt n-txt">
+                       <span class="error-txt"><span class="errorNumber"></span>{{i18n "numberError"}}</span>
+                      <span class="viewUploadError d-txt">{{i18n "viewErrorReason"}}</span>
+                </span>
+             <span class="u-otherError"></span>
+             <p class="n-txt p-txt">{{i18n "csvTip"}}
+                 <span class="d-txt viewExplain">{{i18n "viewExplain"}}</span>
+             </p>
+         </div>
+          <div class="batchType-Two">
+              <label data-action="batchTypePwd">
+                  <input type="radio" class="input-hidden" name="migrationType" value="2"/>
+                  <span class="radio-box"></span>
+                  <span class="b-txt">{{i18n "batchTypePwd"}}</span>
+              </label>
+              <span class="d-txt">{{i18n "b_T_Pwd"}}</span>
+              <div class="unifiedPwdBox">
+                  <div class="input-box">
+                      <input type="password" name="unifiedPwd" placeholder="{{i18n  'password'}}"/>
+                  </div>
+              </div>
+          </div>
+      </div>
+  </div>
+    <div class="t-chooseFile">
+        <div>
+          {{i18n "m_file"}}<span>{{i18n "h_file"}}</span>
+        </div>
+        <div class="f-type">
+         <div>
+             <label data-action="box">
+                 <input type="radio" class="input-hidden" name="customizeFolder" value="false" />
+                 <span class="radio-box"></span>
+                 <span>{{i18n "fileBox"}}</span>
+             </label>
+         </div>
+            <div class="diy-file">
+                <label data-action="diy">
+                    <input type="radio" class="input-hidden" name="customizeFolder" value="true" data-customizeFolder="checked" />
+                    <span class="radio-box"></span>
+                    <span>{{i18n "diyFile"}}</span>
+                </label>
+                <div class="input-box">
+                    <input type="text" name="folderName" placeholder="{{i18n 'file'}}" value="{{i18n 'oldEmail'}}"/>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="s-footer">
+        <div class="errorTip"></div>
+        <div class="f-box">
+            <div class="btn goStepTwo lastStep">{{i18n "lastStep"}}</div>
+            <div class="btn goStepFour">{{i18n "nextStep"}}</div>
+        </div>
+    </div>
+    <div class="csvExplain">
+      <div class="header">
+          <span>{{i18n "import_csv"}}</span>
+          <img src="./img/close.png" class="icon closeExplain"/>
+          <!--<span class="icon"></span>-->
+      </div>
+        <div class="c-d-content">
+            <div class="txt">
+                <span class="icon"></span>
+               <a href="./csvTemplate/userImportTemplate.csv"><span class="title">{{i18n "i_csv_download"}}</span></a>
+                <p class="d-txt">{{i18n "demoList"}}</p>
+            </div>
+        </div>
+        <div class="c-d-table">
+         <table>
+             <tr>
+                 <th>
+                     {{i18n "demo_csv_email"}}
+                 </th>
+                 <th>
+                    {{i18n "demo_csv_pass"}}
+                 </th>
+             </tr>
+             <tr>
+                 <td>
+                     xxx@xx.com
+                 </td>
+                 <td>
+                     xxxxxxxxxxx
+                 </td>
+             </tr>
+         </table>
+        </div>
+    </div>
+</div>

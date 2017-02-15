@@ -1,0 +1,410 @@
+#openMove{
+  .o-content{
+    bottom: 200px;
+  }
+.openMoveBtn{
+  display: inline-block;
+  background: @lastStepColor ;
+  &:hover{
+    background: @lastStepHoverColor ;
+  }
+  &:active{
+    background: @lastStepClickColor ;
+  }
+  &.refreshBtn{
+    width: 56px;
+    height: 24px;
+    line-height: 24px;
+  }
+  &.closeMigration{
+    width: 90px;
+    height: 24px;
+    line-height: 24px;
+    border: 0;
+  }
+}
+  .o-inquire{
+    padding-bottom: 30px;
+    border-bottom: 1px solid @borderColor;
+    font-size: 16px;
+    .o-account{
+      margin-top: 20px;
+      font-size: 14px;
+      color: @lastStepClickColor;
+    }
+  }
+  .m-status{
+    padding: 30px 0 30px 0;
+    border-bottom: 1px solid @borderColor;
+    .m-s-table{
+      .table{
+        margin-top: 20px;
+        table{
+          text-align: center;
+          width: 100%;
+          font-size: 14px;
+          border-spacing: 0;
+          border-collapse: collapse;
+          table-layout: fixed;
+          border-left:  1px solid @blueColor;
+          border-top:  1px solid @blueColor;
+          tr,td,th{
+            height: 40px;
+            cursor: pointer;
+          }
+          tr{
+            border-bottom:  1px solid @blueColor;
+          }
+          th{
+            width: 20%;
+            color: @whiteColor;
+            background: @blueColor;
+            border-right:  1px solid @blueColor;
+          }
+          td{
+            border-right:  1px solid @blueColor;
+          }
+        }
+      }
+      .m-a-tips{
+        display: none;
+        margin-top: 20px;
+      }
+      .migrationAgain{
+        font-size: 12px;
+        border: 1px solid #e5e5e5;
+        margin-top: 10px;
+        padding: 12px;
+        .againMove{
+          color: @fontlightColor;
+          cursor: pointer;
+        }
+        .a-m-close{
+          display: none;
+          color: @fontlightColor;
+          cursor: pointer;
+          float: right;
+          margin-right: 10px;
+        }
+      }
+      .moreAgain{
+        position: relative;
+        display: none;
+        font-size: 14px;
+        padding: 32px 0 0 0;
+        .a-independent-txt{
+          //display: none;
+          padding-left: 20px;
+          margin-top: 8px;
+          line-height: 16px;
+          font-size: 12px;
+          .a-independent-bg{
+            margin-top: 10px;
+            width: 710px/1.5;
+            height: 273px/1.5;
+          }
+        }
+        .m-a-batch{
+          margin-top: 40px;
+        }
+        .m-a-batchType{
+          display: none;
+          margin-top: 20px;
+          padding-left: 20px;
+          .a-o-txt{
+            font-size: 12px;
+            color: #4c4c4c;
+            margin-top: 8px;
+          }
+          .a-batchType-one{
+            .a-one-txt{
+              padding-left: 20px;
+              .webuploaderBox{
+                margin-top: 8px;
+              }
+              .d-a-txt{
+                color: @blueColor;
+                cursor: pointer;
+              }
+              .upload-a-Error{
+                display: none;
+                .error-txt{
+                  color: red;
+                }
+              }
+              .u-otherError{
+                font-size: 12px;
+                color: red;
+              }
+            }
+          }
+          .a-batchType-Two{
+            margin-top: 34px;
+            .a-two-input{
+              padding-left: 20px;
+            }
+            .a-unifiedPwdBox{
+              display: none;
+              margin-top: 5px;
+              .s_unifiedPwd{
+                display: inline-block;
+                margin-left: 20px;
+              }
+            }
+          }
+          .a-batchType-Three{
+            margin-top: 34px;
+            .a-three-input{
+              padding-left: 20px;
+              .choose-user{
+                margin-top: 10px;
+                font-size: 12px;
+              }
+            }
+          }
+        }
+        .s_migration{
+          margin-top: 30px;
+          padding-top: 10px;
+          border-top: 1px solid #e5e5e5;
+          &:after{
+            display: block;
+            content: "";
+            clear: both;
+          }
+          .s_migrationBtn{
+            float: right;
+          }
+        }
+        .csvExplain{
+          top: 20px;
+        }
+      }
+    }
+
+  }
+  .o-i-tableBox{
+    padding-top: 30px;
+    font-size: 14px;
+     &:after{
+       content: "";
+       display: block;
+       clear: both;
+     }
+    >div{
+      overflow: hidden;
+    }
+    .tableTool{
+      margin-top: 10px;
+      select{
+        height: 24px;
+      }
+      .migration-pageSize{
+        float: right;
+      }
+
+    }
+    .b-icon{
+      float: right;
+      margin-right: 10px;
+      .lastPage,.nextPage,.n-lastPage,.n-nextPage{
+        background: url("../img/updown.png");
+        width: 24px;
+        height: 24px;
+        display: inline-block;
+        cursor: pointer;
+      }
+      .lastPage,.n-lastPage{
+       &:hover{
+         background: url("../img/updown2.png");
+       }
+      }
+      .nextPage,.n-nextPage{
+        background-position: -24px 0;
+        &:hover{
+          background: url("../img/updown2.png");
+          background-position: -24px 0;
+        }
+      }
+    }
+    .tableFooterTool{
+      margin-top: 10px;
+      .migration-pageSize{
+        float: right;
+      }
+      select{
+        height: 24px;
+      }
+    }
+    .o-i-table,.n-o-table{
+      margin-top: 10px;
+      border:1px solid #52acff;
+      table{
+        width: 100%;
+        border-spacing: 0;
+        border-collapse: collapse;
+        table-layout: fixed;
+        text-align: left;
+
+        tr{
+          height: 40px;
+          &:nth-child(even) {background: #ffffff}
+          &:nth-child(odd) {background: #f5faff}
+        }
+        th,td{
+          padding-left: 20px;
+        }
+        .input{
+          color: @blueColor;
+          width: 50px;
+          padding-left: 5px;
+        }
+        td{
+          &.t-checkbox{
+            padding-left: 10px;
+          }
+        }
+        .status{
+
+        }
+        .account{
+          width: 240px;
+        }
+
+      }
+    }
+    .tablePageNav,.tablePageNavTwo, .n-tablePageNav,.n-tablePageNavTwo{
+      position: relative;
+      float: right;
+      margin-right: 10px;
+    }
+    .tableUl{
+      width: 9999em;
+      position: relative;
+      transition: left 0.5s;
+      left: 0;
+      li{
+        float: left;
+        border: 1px solid @borderColor;
+        width: 30px;
+        height: 30px;
+        text-align: center;
+        line-height: 30px;
+        list-style: none;
+      }
+    }
+  }
+  .notMigrationBg{
+    display: none;
+    background: #000;
+    opacity: 0.5;
+    filter:alpha(opacity=50);
+    height: 100%;
+    width: 100%;
+    position: fixed;
+    z-index: 9998;
+    top: 0;
+  }
+  .notMigration{
+    display: none;
+    position: fixed;
+    width: 636px;
+    height: 385px;
+    margin: auto;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    top: 0;
+    z-index: 9999;
+    background: #ffffff;
+    .top-box{
+      .top-title{
+        height: 50px;
+        line-height: 50px;
+        background:@blueColor ;
+        padding: 0 20px;
+        color: #ffffff;
+        font-size: 16px;
+      }
+      .top-txt{
+        font-size: 14px;
+        margin-top: 10px;
+        color: #616e82;
+        padding: 0 20px;
+      }
+      .top-tip{
+        margin-top: 10px;
+        font-size: 12px;
+        padding: 0  0 0 20px;
+        width:303px;
+        .tp-bg{
+          display: inline-block;
+          background: yellow;
+          color: #616e82;
+        }
+      }
+    }
+    .n-m-table{
+      width: 100%;
+      padding: 0 20px;
+    }
+    .startMigration{
+      margin-top: 30px;
+      .s-migration{
+        float: right;
+      }
+      &:after{
+        content: "";
+        display: block;
+        clear: both;
+      }
+    }
+  }
+  .no-data{
+    display: none;
+  }
+  .s_migration_error{
+    float: left;
+    color: red;
+  }
+  .m_modifycontent{
+     width: 400px !important;
+     height: 186px;
+    .m_c_modifyContent{
+      width: 12px;
+      height: 12px;
+      float: right;
+      margin-right: 20px;
+      margin-top: 8px;
+    }
+    .title{
+      height: 30px;
+      line-height: 30px;
+      background: @blueColor;
+      color: #ffffff;
+      padding-left: 20px;
+    }
+    .content{
+      padding: 30px 20px;
+    }
+    .f-btnBOX{
+      height: 30px;
+      line-height: 30px;
+      &:after{
+        content: "";
+        clear: both;
+        display: block;
+      }
+      .m_know{
+        float: right;
+        margin-right: 20px;
+        text-decoration:underline;
+        cursor: pointer;
+      }
+      .m_cancel{
+        float: right;
+        margin-right: 10px;
+      }
+    }
+  }
+}
