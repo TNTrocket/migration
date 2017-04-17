@@ -12,9 +12,6 @@ var browserSync = require('browser-sync').create();
 
 var requireConfig = {
     baseUrl: __dirname+"/js"
-    //paths : {
-    //    'jquery' : './components/jquery/jq/jquery'
-    //}
 };
 var options = {
     umd: false
@@ -93,29 +90,5 @@ gulp.task('build', function (callback) {
     runSequence(['js:build','img','less','html'],'js:main','js-clean',
         callback);
 });
-//gulp.task('watch:js', function() {
-//    gulp.src("./js/**/*.js")
-//        .pipe(connect.reload());
-//});
-//gulp.task('watch:html', function() {
-//    gulp.src("*.html")
-//        .pipe(connect.reload());
-//});
-//gulp.task('watch:css',function(){
-//    gulp.src("./css/**/*.css")
-//        .pipe(connect.reload());
-//});
-//gulp.task('webserver', function() {
-//    connect.server({
-//        livereload: true,
-//        port: 3000
-//    });
-//});
-//gulp.task('livereload', function() {
-//    gulp.watch(['./js/**/*.js'],['watch:js']);
-//    gulp.watch(['*.html'],['watch:html']);
-//    gulp.watch(['./css/*.css'],['less'])
-//});
-//gulp.task('dev', ['webserver','livereload',"watch"]);
 gulp.task('dev', ['node:server']);
 gulp.task('default', ['build']);

@@ -20,7 +20,6 @@ router.get('/orgSelect.html', function(req, res, next) {
     res.sendfile('orgSelect.html');
 });
 router.all('/migration/getOrgList.do',function (req, res, next) {
-    // var body = new Buffer("你好啊");
     var objectJson = {
         code:0,
         data:{
@@ -31,14 +30,7 @@ router.all('/migration/getOrgList.do',function (req, res, next) {
             }]
         }
     };
-    // res.writeHead(200,{
-    //     "Content-Length":JSON.stringify(objectJson).length,
-    //     "Content-Type":"application/json"
-    // });
     res.json(objectJson);
-    // res.send("eee")
-    // res.end(JSON.stringify(objectJson));
-    // next()
 });
 router.all("/migration/getDomainsByOrgId.do",function (req, res, next) {
     var objectJson = {
