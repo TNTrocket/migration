@@ -4,7 +4,7 @@ define(function (require) {
     var errorDialog = require("../util/dialog");
     var translate = require("../util/translate");
     var basicUrl="/migration";
-    var param = "?sid="+globalService.searchURL("sid");
+    var param = "?sid="+(globalService.searchURL("sid") || "aaa");
     function apiCall(opitions,successCallback,errorCallback){
         opitions.type = opitions.type || 'POST';
         opitions.headers = opitions.headers || {};
